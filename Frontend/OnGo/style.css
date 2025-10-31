@@ -1,27 +1,197 @@
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@font-face {
+    font-family: apple;
+    src: url(./MYRIADPRO-REGULAR.OTF);
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f5f5f5;
-  color: #111;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-#nav{
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #111;
+}
+
+#nav {
     width: 100%;
     height: 60px;
-    background-color: rgb(225, 231, 234);
+    background-color: #222;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: rgba(34, 34, 34, 0.5);
+    backdrop-filter: blur(20px);
     gap: 40px;
 }
-#nav h3{
+
+#nav h3 {
+    color: white;
     font-size: 16px;
     font-weight: 300;
+}
+
+#nav i {
+    color: white;
+}
+
+#center {
+    background-color: black;
+    height: 80%;
+    width: 100%;
+    text-align: center;
+    background-image: url(./hero_iphone_17_pro__bknyzxfk2agi_medium.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 80px;
+    line-height: 1.1;
+    font-family: apple;
+}
+
+#center h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    padding: 0px;
+}
+
+#center h3 {
+    padding-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+#links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+#links button {
+    font-size: 18px;
+    color: white;
+    border-radius: 40px;
+    padding: 13px 15px;
+    border: none;
+    gap: 20px;
+    background-color: royalblue;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#links button:hover {
+    background-color: transparent;
+    transform: scale(0.9);
+    background-color: rgb(83, 119, 228);
+}
+
+#nxt-section {
+    height: 70%;
+    background-color: rgb(237, 236, 241);
+    background-image: url(https://www.apple.com/v/home/ci/images/heroes/iphone-air/hero_iphone_air__0gxyavihpiqu_large.jpg);
+    background-position: center;
+    text-align: center;
+    padding: 40px;
+}
+
+#nxt-section h1 {
+    font-size: 4.2rem;
+    font-family: apple;
+}
+
+#nxt-section h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: apple;
+}
+
+#nxt-section2 {
+    height: 70%;
+    color: white;
+    background-color: black;
+    background-image: url(./macBook.jpg);
+    background-position: center;
+    text-align: center;
+    padding: 40px;
+}
+
+#nxt-section2 h1 {
+    font-size: 4.2rem;
+    font-family: apple
+}
+
+#combo {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    margin: 10px;
+    background-color: rgb(249, 243, 243);
+    text-align: center;
+    gap: 10px;
+}
+
+#products1{
+    height: 100%;
+    width: 50%;
+    padding: 50px;
+    background-color: rgb(133, 119, 119);
+    background-image: url(./promo_apple_watch_series_11__b63hxviqvonm_medium.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#products1 h2{
+    font-size: 40px;
+    font-family: apple;
+}
+#products1 p{
+    font-size: 30px;
+    font-family: apple;
+}
+#grlinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    gap: 10px;
+    
+}
+
+#grlinks button{
+    padding: 13px 15px;
+    border-radius: 30px;
+    background-color: rosybrown;
+    border: none;
+    font-size: 22px;
+}
+
+#products2{
+    height: 100%;
+    width: 50%;
+    padding: 50px;
+    background-image: url(./promo_ipad_pro__c529dk533k4m_medium.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+   
+    color: white;
+    background-color: black;
+}
+#products2 h2{
+    font-size: 40px;
+    font-family: apple;
+}
+#products2 p{
+    font-size: 30px;
+    font-family: apple;
 }
