@@ -17,36 +17,52 @@ main{
     width: 100%;
     background-color: #222;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 60px 1fr 0.5fr 0.5fr;
-    grid-template-areas: "header header header"
-                         "section section section"
-                         "left-div up-div right-div"
-                         "left-div down-div right-div"
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "left-top top-center top-right"
+                          "left-top center btm-right"
+                          "left-btm left-btm btm-right"
     ;
-    gap: 10px;
+    gap: 5px;
+    padding: 10px;
+    overflow: auto;
 }
-header{
-    grid-area: header;
+#left-top{
+    grid-area: left-top;
     background-color: darkblue;
 }
-section{
-    grid-area: section;
+
+
+#right-top{
+    grid-area: top-right;
     background-color: darkcyan;
 }
-#Left-div{
-    grid-area: left-div;
+
+
+#center-top{
+    grid-area: top-center;
     background-color: darkgoldenrod;
 }
-#Right-div{
-    grid-area: right-div;
-    background-color: darkgrey;
+
+
+#center{
+    grid-area: center;
+    background-color: darkgray;
 }
-#Up-div{
-    grid-area: up-div;
-    background-color: darkviolet;
+
+#left-bottom{
+    grid-area: left-btm;
+    background-color: darkgreen;
 }
-#Down-div{
-    grid-area: down-div;
-    background-color: darkseagreen;
+
+
+#right-bottom{
+    grid-area: btm-right;
+    background-color: darkred;
+}
+
+main div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
