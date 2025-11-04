@@ -2,43 +2,51 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 html, body {
   height: 100%;
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
 }
 
-.parent{
-    height: 50%;
+main{
+    height: 100%;
     width: 100%;
     background-color: #222;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 60px 1fr 0.5fr 0.5fr;
+    grid-template-areas: "header header header"
+                         "section section section"
+                         "left-div up-div right-div"
+                         "left-div down-div right-div"
+    ;
     gap: 10px;
-    align-items: center;
-    flex-wrap: nowrap;
-    overflow: auto;
 }
-
-.parent::-webkit-scrollbar{
-    background-color: grey;
+header{
+    grid-area: header;
+    background-color: darkblue;
 }
-.parent::-webkit-scrollbar-thumb{
-    background-color: black;
+section{
+    grid-area: section;
+    background-color: darkcyan;
 }
-
-#box{
-    margin: 10px;
-    flex-shrink: 0;
-    height: 300px;
-    padding: 10px;
-    width: 200px;
-    background-color: white;
+#Left-div{
+    grid-area: left-div;
+    background-color: darkgoldenrod;
 }
-h1{
-    background: linear-gradient(90deg, red , yellow);
-    background-clip: text;
-    color: transparent;
-    -webkit-text-stroke: 1px black;
+#Right-div{
+    grid-area: right-div;
+    background-color: darkgrey;
+}
+#Up-div{
+    grid-area: up-div;
+    background-color: darkviolet;
+}
+#Down-div{
+    grid-area: down-div;
+    background-color: darkseagreen;
 }
