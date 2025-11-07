@@ -1,0 +1,208 @@
+@font-face {
+    font-family: Vijay;
+    src: url(./Icecold.ttf);
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: whitesmoke;
+}
+
+main{
+    width: 900px;
+    height: 700px;
+    margin: 10px auto;
+    background-color: white;
+    color: black;
+    display: grid;
+    grid-template-columns: 240px 240px 390px;
+    grid-template-rows: 100px 300px 250px;
+    grid-template-areas: "header header header"
+                          "top-left top-left top-right"
+                          "btm-left btm-right top-right"
+    ;
+    gap: 10px;
+    padding: 5px;
+}
+nav{
+    grid-area: header;
+    border: 5px solid rgba(128, 128, 128, 0.592);
+    border-radius: 25px;
+    margin: 10px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+nav h2{
+    font-size: 3em;
+    line-height: 0.9;
+    padding: 20px;
+}
+#menu{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;  
+    transition: all 1s ease-in; 
+}
+#menu h4:hover{
+    font-weight: 700;
+    cursor: pointer;
+}
+#menu h4{
+    font-size: 1.8em;
+    font-weight: 300;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: capitalize;
+}
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box i {
+  position: absolute;
+  left: 25px;
+  font-weight: 600;
+  font-size: 1.8em;
+  color: black;
+}
+
+.search-box input {
+  height: 50px;
+  width: 150px;
+  border-radius: 25px;
+  border: 2px solid gray;
+  padding-left: 45px; 
+  font-size: 1.5em;
+}
+
+#top-left{
+    grid-area: top-left;
+    background-color: rgb(193, 188, 188);
+    border-radius: 5%;
+    font-size: 24px;
+    padding: 40px;
+}
+#top-left h1{
+    font-family: Vijay;
+    font-size: 2em;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    line-height: 0.9;
+    font-weight: 900;
+    text-align: justify;
+}
+#top-left p{
+   padding-top: 10px;
+   font-size: 12px;
+   text-align: justify;
+}
+#top-right{
+    grid-area: top-right;
+    position: relative;
+}
+#top-right img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius:3%;
+}
+#btm-left{
+    grid-area: btm-left;
+    border-radius: 5%;
+    overflow: hidden;
+}
+#btm-left h1{
+    display: inline-block;
+    position: absolute;
+    bottom: 5%;
+    padding: 5px;
+    opacity: 0.8;
+    color: white;
+}
+#btm-left img{
+    height: 100%;
+    width: 100%;
+    object-position: top;
+    object-fit: cover;
+    
+    border-radius: 20px;
+}
+#btm-right{
+    grid-area: btm-right;
+    overflow: hidden;
+    border-radius: 5%;
+}
+#btm-right h1{
+    display: inline-block;
+    /* background-color: aqua; */
+    position: absolute;
+    bottom: 5%;
+    opacity: 0.8;
+    padding: 5px;
+    color: white;
+}
+#btm-right img{
+    border-radius: 20px;
+    width: 100%;
+    object-position: top;
+    object-fit: cover;
+    
+}
+
+#btns{
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    margin: 20px;
+    padding: 30px;
+    gap: 15px;
+}
+
+#btns button{
+    height: 25px;
+    width: 150px;
+    text-align: left;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 25px;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 14px;
+    border:  1px solid white;
+    transition: all 0.3s ease-in;
+}
+
+#btns>button:hover{
+    background-color: #ffffff7e;
+}
+
+#top-right>button{
+    padding: 15px 15px;
+    margin: 10px;
+    color: white;
+    font-weight: 600;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.307);
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 49%;
+    transition: all 0.3s ease;
+}
+
+#top-right>button:hover{
+    transform: scale(1.1);
+}
