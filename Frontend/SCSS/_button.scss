@@ -1,0 +1,9 @@
+
+@mixin btn-style($bgc: blue, $fontsize: 18px, $color: white){
+    background-color: $bgc;
+    padding: 10px 20px;
+    border: 1px solid black;
+    font-size: $fontsize;
+    color: $color;
+    cursor: pointer;
+}
