@@ -1,0 +1,144 @@
+@font-face {
+    font-family: Vijay;
+    src: url(./Lilard.otf);
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    max-height: 100%;
+    width: 100%;
+    background-color: #fff;
+    color: black;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.5fr;
+    grid-template-areas: "header header header"
+                          "top-left top-left top-right"
+                          "btm-left btm-right top-right"
+    ;
+    gap: 20px;
+    padding: 5px;
+}
+nav{
+    grid-area: header;
+    border: 10px solid rgba(128, 128, 128, 0.592);
+    border-radius: 50px;
+    margin: 20px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+nav h2{
+    font-size: 3em;
+    line-height: 0.9;
+    padding: 20px;
+}
+#menu{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 20px;  
+    transition: all 1s ease-in; 
+}
+#menu h4:hover{
+    font-weight: 700;
+    cursor: pointer;
+}
+#menu h4{
+    font-size: 2.5em;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box i {
+  position: absolute;
+  left: 25px;
+  font-weight: 600;
+  font-size: 1.8em;
+  color: black;
+}
+
+.search-box input {
+  height: 80px;
+  width: 400px;
+  border-radius: 50px;
+  border: 2px solid gray;
+  padding-left: 75px; 
+  font-size: 1.2em;
+}
+
+#top-left{
+    grid-area: top-left;
+    background-color: rgb(193, 188, 188);
+    border-radius: 5%;
+    font-size: 30px;
+    padding: 150px;
+}
+#top-left h1{
+    font-family: Vijay;
+    font-size: 10em;
+    word-spacing: 20px;
+    letter-spacing: 10px;
+    text-align: center;
+    line-height: 0.9;
+    font-weight: 900;
+    text-align: justify;
+}
+#top-left p{
+   padding-top: 200px;
+   font-size: 2em;
+   text-align: justify;
+}
+#top-right{
+    grid-area: top-right;
+    
+}
+#top-right img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius:3%;
+}
+#btm-left{
+    grid-area: btm-left;
+    background-color: darkgoldenrod;
+    border-radius: 5%;
+    overflow: hidden;
+}
+#btm-left img{
+    height: 100%;
+    width: 100%;
+    object-position: top;
+    object-fit: cover;
+    
+    border-radius: 50px;
+}
+#btm-right{
+    grid-area: btm-right;
+    
+}
+
+#btm-right img{
+    width: 100%;
+    
+    object-fit: cover;
+    
+}
+
