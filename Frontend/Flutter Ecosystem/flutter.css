@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/googlesans/v65/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPiIUvaYr.woff2) format('woff2');
+  unicode-range: U+0308, U+0530-058F, U+2010, U+2024, U+25CC, U+FB13-FB17;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Google Sans" sans-serif;
+}
+nav{
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    align-items: center;
+    background-color: white;
+}
+#hid{
+    display: none;
+}
+#left-sec{
+    margin: 1rem 2rem;
+}
+#left-sec img{
+    object-fit: cover;
+    height: 2rem;
+}
+#right-sec{
+    cursor: pointer;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+#right-sec i{
+    font-size: 1.5rem;
+}
+main{
+    height: 100%;
+    width: 100%;
+    background-color: #dde8fa;
+}
+
+section.sec1{
+    background: linear-gradient(to bottom, rgb(243, 250, 255), rgba(255, 192, 203, 0.415));
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#img-sec{
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+}
+#img-sec img{
+    padding: 1rem;
+    width: 100%;
+    object-fit: cover;
+}
+#text{
+    background: rgba(236, 229, 229, 0);
+    width: 100%;
+    padding: 2rem ;
+    display: flex;
+    
+}
+#text h1{
+    text-align: center;
+    font-size: 3rem;
+    line-height: 0.9;
+    font-weight: 550;
+}
+
+.sec1 h2{
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+@media (min-width:900px){
+
+    #right-sec{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    #hid{
+        display: contents;
+        margin-right: 1rem;
+        gap: 2rem;
+        display: flex;
+        flex-direction: row;
+    }
+    #hid h3{
+        font-size: 1rem;
+        color: rgb(84, 83, 83);
+    }
+    #hid h3:hover{
+        color: black;
+    }
+    #cont{
+        display: flex;
+        flex-direction: row-reverse
+    }
+    #img-sec{
+        width: 50%;
+        padding-right: 5rem;
+    }
+    #text{
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        padding-left:  7rem;
+    }
+    #text h1{
+        width: 70%;
+        font-size: 4rem;
+        line-height: 1;
+        font-weight: 700;
+        text-align: start;
+    }
+    .sec1 h2{
+        text-align: center;
+        padding: 1rem 5rem;
+    }
+}
