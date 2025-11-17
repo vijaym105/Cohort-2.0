@@ -113,7 +113,7 @@
 
 
 // Conditional Operators (if, else, else-if, ternary, switch)
-//(A).
+// (A).
 // let age = 18;
 // if(age >= 18){
 //     console.log("You can vote.");
@@ -121,7 +121,7 @@
 // else{
 //     console.log("Can't vote"); 
 // }
-//(B).
+// (B).
 // let marks = 50;
 // if(marks >= 90){
 //     console.log("A grade");
@@ -138,7 +138,7 @@
 // else{
 //     console.log("Failed");
 // }
-//(C).
+// (C).
 // let city = "Delhi";
 // if(city === "Maharastra"){
 //     console.log("MH is login");
@@ -149,17 +149,17 @@
 // else{
 //     console.log("Not found");
 // }
-//(D).
+// (D).
 // let score = 40;
 // let re = score >= 35 ? "Fail" : "Pass";
 // console.log(re);
-//(E).
+// (E).
 // Convert this if-else into a ternary:
 // if (temperature > 30) { “Hot” } else { “Pleasan")
 // let temp = 38;
 // let res = temp >= 30 ? "hot" : "Pleasan";
 // console.log(res);
-//(F).
+// (F).
 // let days;
 
 // switch (days){
@@ -179,3 +179,98 @@
 //     days = "invalid";
 // }
 // console.log(days)
+
+
+// Made 5s table using for loop
+// for(i=1; i<=10;i++){
+//     console.log(`5*${i} = ${i*5}`);
+// }
+
+// Made Even no. detecter
+// for(i=1; i<=20; i++){
+//     if(i % 2 === 0){
+//         console.log(`${i} is even`);
+//     }
+// }
+
+// Made for odd
+// for(i=1; i<=20; i++){
+//     if(i % 2 != 0){
+//         console.log(`${i} is odd`);
+//     }
+// }
+
+// Level 1
+// 7.Ask user’s age and check if eligible to vote If age >= 18 → “Eligible”, else → “Not eligible”
+// let age = prompt("Whats your age");
+// if(age === null){
+//     console.error("You cancelled.");
+// }else{
+//     if(age.trim() == ""){
+//         console.log("Thik se daal bhakhau");
+//     }
+// else{
+//     let ages = Number(age);
+//     if(isNaN(ages)){
+//         console.error("Only number is allowed");
+//     }else{
+//         if(age >= 18){console.log("u are eligible to vote");
+//         }else{
+//             console.log("u aren't eligible..");
+//         }
+//     }
+// }
+// }
+
+
+// // 8.Print multiplication table of 5 . Use loop to print 5 × 1 to 5 × 10.
+// for(i=1; i<=10; i++){
+//     console.log(`5*${i} = ${5*i}`); 
+// }
+// 9. Count how many numbers between 1 and 15 are greater than 8
+// Loop and count conditionally.
+// var count = 0;
+// for(i=1;i<=15;i++){
+//     if(i>=8){
+//         count++;
+//     }
+// }
+// // console.log(count);
+// 10. Ask user for password and print access status Hardcoded correct password. Compare with user input.
+// let pass = prompt("Enter your password");
+// const password = "Vijay@2005";
+// if(pass === password){
+//     console.log("Successfully login");
+// }else{
+//     console.log("Acess Denied");
+// }
+
+
+// // Level 2
+
+// 11. Allow only 3 attempts to enter correct password If user gets it right early, stop. If not → “Account locked”
+// let password = "Vijay12";
+// for(p = 1; p <= 3; p++){
+// let p = prompt("Enter your password");
+// if(p === password){
+//     console.log("Successfuly logged 💚");
+//     break;
+// }else{
+// console.log("Account is locked");
+// }
+// }
+
+
+// 12. Ask user for words until they type “stop”. Count how many times they typed “yes”
+// Loop until "stop" is typed. Count "yes".
+let words = prompt("Enter a words");
+var count = 0;
+while( words !== "stop"){
+    words = prompt("enter a new word")
+    console.log(words);
+    if(words === "yes"){
+       return count++;
+    }
+    console.log(count);
+}
+
