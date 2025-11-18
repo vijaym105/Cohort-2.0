@@ -249,28 +249,117 @@
 // // Level 2
 
 // 11. Allow only 3 attempts to enter correct password If user gets it right early, stop. If not → “Account locked”
-// let password = "Vijay12";
-// for(p = 1; p <= 3; p++){
-// let p = prompt("Enter your password");
-// if(p === password){
-//     console.log("Successfuly logged 💚");
-//     break;
-// }else{
-// console.log("Account is locked");
-// }
-// }
+// let attempts = 0;
+// let pass = "VijayBhai";
+// let Opened = false
+// let password = prompt("Enter your password");
+// attempts++;
+// if(password === pass) Opened = true;
 
+// while (password != pass) {
+//     if(attempts === 3){
+//         console.log("Account locked");
+//         break;
+//     }
+//     password = prompt("Enter your password");
+//     attempts++;
+//     if(password === pass) Opened = true;
+// }
+// if(Opened == true){
+//     console.log("Account Opened");
+    
+// }
 
 // 12. Ask user for words until they type “stop”. Count how many times they typed “yes”
 // Loop until "stop" is typed. Count "yes".
-let words = prompt("Enter a words");
-var count = 0;
-while( words !== "stop"){
-    words = prompt("enter a new word")
-    console.log(words);
-    if(words === "yes"){
-       return count++;
-    }
-    console.log(count);
-}
 
+// var count = 0;
+// let words = prompt("Enter a words");
+// count++;
+// while( words !== "stop"){
+//     words = prompt("enter a new word")
+//     console.log(words);
+//     if(words === "yes"){
+//        return count++;
+//     }
+//     console.log(count);
+// }
+
+//13. Print numbers divisible by 7 from 1 to 50
+// Use modulo % and loop.
+// for(i=1;i<=50;i++){
+//     if(i % 7 === 0){
+//         console.log(`${i} is Divisible by 7`)
+//     }
+// }
+
+// 14. Sum of all odd numbers from 1 to 30
+// Add only odd numbers. Print final sum.
+// let sum = 0;
+// for(i=1;i<=30;i++){
+//     if(i % 2 != 0){
+//         sum += i;
+//     }
+// }
+// console.log(`${sum} is sum of odd numbers.`);
+
+// 15. Keep asking number until user enters an even number
+// Use while loop. Stop only if input is even.
+// let num = +prompt("Enter a number");
+// while (num % 2 !== 0) {
+//      num = +prompt("Enter a number");
+//      console.log(num);
+// }
+
+// 16. Print numbers between two user inputs
+// Input start and end using prompt() → print all between.
+// let start = prompt("Enter a first number");
+// let end = prompt("Enter the second number");
+
+// for(i=start; i<end;i++){
+//      console.log(i);  
+// }
+
+// 17. Print only first 3 odd numbers from 1 to 20
+// Use loop. Stop with break after 3 odd prints.
+// let count = 0;
+// for(i=1; i<=20 && count<3; i++){
+//      if(i % 2 !== 0){
+//      count++;
+//      console.log(i);
+//      }
+// }
+
+// 18. Ask user 5 numbers. Count how many are positive
+// Use loop + condition + counter.
+// let counter = 0;
+// let flag = 1;
+// let num = +prompt("Enter 1 Numbers");
+// flag++
+// while(flag <= 5){
+//      num = +prompt(`Enter ${flag} number`);
+     
+//      if(num > 0){
+//           counter++;
+//           console.log(`${counter} times u entered positive number` );
+//      }
+//      flag++;
+// }
+
+// 19. ATM Simulator – Allow 3 withdrawals
+// Start with ₹1000 balance. Ask withdrawal amount 3 times.
+// If enough balance → deduct
+// Else → print “Insufficient balance”
+// let bal = 1000;
+// let counter = 0;
+
+// while(bal > 0 && counter !=3){
+//  let widthdraw = +prompt("Enter the amount");
+//  counter++;
+//  if(widthdraw <=bal){
+//     bal -= widthdraw;
+    
+//  }else {console.log("Insufficient balance");
+//  }
+// }
+// console.log(`Balance : ${bal}`);
