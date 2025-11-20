@@ -246,7 +246,7 @@
 // }
 
 
-// // Level 2
+// // Level 2 Assignment 3
 
 // 11. Allow only 3 attempts to enter correct password If user gets it right early, stop. If not → “Account locked”
 // let attempts = 0;
@@ -362,4 +362,108 @@
 //  }else {console.log("Insufficient balance");
 //  }
 // }
-// console.log(`Balance : ${bal}`);
+// console.log(`Balance : ${bal}`);\
+
+// Argument Object
+// function AB(){
+//     console.log(arguments[1,2]);
+// }
+// AB("Vijay",20,"Pune")
+
+// function ABa(a,b,c,d){
+//     console.log(a,b,c,d);
+// }
+// let arr = [1,2,3,4,5,6]
+// ABa(...arr)
+
+// Reduce 
+// function tryin(...num){
+//   let ans =  num.reduce(function(acc, val){
+//         return acc*val;
+//     }, 1);
+//     console.log(ans);
+    
+// }
+// tryin(1,2,3,4,5,6,7,8,9,10);
+
+
+//💚💚💚💚
+//Level 1 – Basic Function, Array & Object Code
+//Tasks (Easy)
+
+//1. Write a function `sayHello()` that prints `"Hello
+// // JavaScript"`.
+// function sayHello(nav){
+//     console.log(`Hello ${nav}`);
+// }
+// sayHello("Vijay");
+
+// 2. Create a function `add(a, b)` that returns their sum
+// and log the result.
+// function add(a,b){
+//     return a+b;
+// }
+// let res = add(2,5);
+// // console.log(res);
+
+// 3. Write a function with a default parameter `name =
+// "Guest"` that prints `"Hi <name>"`.
+// function Def(name = "Guest"){
+//     console.log(`Hello ${name}`);
+// }
+// Def();
+
+// 4. Use rest parameters to make a function that adds
+// unlimited numbers.
+// function Rest(...num){
+//     console.log(num);
+// }
+// Rest(1,2,3,5,6);
+
+// 5. Create an IIFE that prints `"I run instantly!"`.
+// (function(){
+//     console.log("I run instantly");
+// })();
+
+// 6. Make a nested function where the inner one prints a
+// variable from the outer one.
+// function Outer(){
+//     let a = 10;
+//     function Inner(){
+//         console.log(a);
+//     }
+//     Inner();
+// }
+// Outer();
+
+// 7. Create an array of 5 fruits. Add one at the end and
+// remove one from the beginning.
+// let arr = ["Apple", "Banana", "Watermelon", "Guava", "Orange"];
+// arr.push("peach");
+// arr.shift();
+// console.log(arr);
+
+// 8. Use a `for` loop to print all elements of an array.
+// let arr = [1,2,3,4];
+// arr.forEach(val => {
+//     console.log(val);
+// })
+
+// 9. Create an object `person` with keys `name`, `age`,
+// and `city`, and print each key’s value.
+// let person = {
+//     name : "Vijay",
+//     age: 20,
+//     city: "Pune"
+// }
+// for(let key in person){
+//     console.log(person[key]); // Method 1 Short
+// }
+// let nam = person.name;
+// console.log(nam); // Method 2 very lengthy
+
+// 10. Use `setTimeout()` to log `"Time’s up!"` after 2
+// seconds.
+setTimeout(function() {
+    console.log("Times's Up");
+}, 2000)
