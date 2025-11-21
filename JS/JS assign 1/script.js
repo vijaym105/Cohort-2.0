@@ -464,6 +464,120 @@
 
 // 10. Use `setTimeout()` to log `"Time’s up!"` after 2
 // seconds.
-setTimeout(function() {
-    console.log("Times's Up");
-}, 2000)
+// setTimeout(function() {
+//     console.log("Times's Up");
+// }, 2000)
+
+
+
+// 🟡 Level 2 – Functional Thinking & Logic Tasks
+// (Intermediate)
+
+// 1. Write a higher-order function `runTwice(fn)` that
+// takes another function and executes it two times.
+// function runTwice(Two){
+//     Two();
+//     Two();
+// }
+//     function child(){
+//         console.log("Running Twice");
+//     }
+// runTwice(child);
+
+// 2. Create one pure function that always returns the
+// same output for a given input, and one impure
+// function using a global variable.
+// function pure(a,b){
+//     console.log(a,b);
+// }
+// pure(1,2); // 1,2
+// pure(1,2); // 1,2
+// let global = 0;
+// function impure(val){
+//     global++;
+//     console.log(global + val);
+// }
+// impure(1); // 2
+// impure(1); // 3
+
+// 3. Write a function that uses object destructuring inside parameters to extract and print `name` and `age`.
+// function obj({name , age}){
+//     console.log(name, age);
+// }
+// obj({name: "Vijay", age: 20});
+
+// 4. Demonstrate the difference between normal function and arrow function when used as object methods (the `this` issue).
+// let obj = {
+//     name: "Vijay",
+//     lu: function(){
+//         console.log(this);
+//     }
+// }
+// obj.lu(); // Vijay
+// let obj = {
+//     nam: "Vijay",
+//     age: 20,
+//     sec: ()=>{
+//         console.log(this.name);
+//     }
+// }
+// obj.sec();
+
+// 5. Given an array of numbers, use `map()` to create a
+// new array where each number is squared.
+// let arr = [2,4,5,6,8];
+// let arr2 = arr.map((val)=>{
+//     return val*val;
+// })
+// console.log(arr2);
+
+// 6. Use `filter()` to get only even numbers from an
+// array.
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8]
+// let arr2 = arr.filter((val)=>{
+//     return val % 2==0 ;
+// })
+// console.log(arr2);
+
+// 7. Use `reduce()` to find the total salary from an array
+// of numbers `[1000, 2000, 3000]`.
+// let sal = [1000, 15000, 30000];
+// let arr2 = sal.reduce((acc, val)=>{
+//     return acc + val;
+// }, 0);
+// console.log(arr2);
+
+// 8. Create an array of names and use `some()` and
+// `every()` to test a condition (e.g., all names longer than
+// 3 chars).
+// let nam = ["Vij", "aja", "tej", "nagesh"];
+// let arr = nam.some((val)=>{
+//     return val.length < 4;
+// })
+// console.log(arr);
+
+// 9. Create an object `user` and test the behavior of
+// `Object.freeze()` and `Object.seal()` by
+// adding/changing keys.
+// let user = {
+//     name: "Vijay",
+//     age: 20
+// };
+// let ne = Object.freeze(user);
+// ne.age = 22; // Completly gets freezed doesn't change anything
+
+// let se = Object.seal(user);
+// se.age = 22; // Only modifies values of obj
+// se.city = "Pune";
+
+// 10. Create a nested object (`user → address → city`) and
+// access the city name inside it.
+let user = {
+    name: "Vijay",
+    age: 20,
+    address: {
+        city: "Pune"
+    }
+};
+
+let city = user.address.city;
