@@ -1,0 +1,35 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #111;
+  align-items: center;
+  justify-content: center;
+}
+
+#box{
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    background-color: rgb(100, 150, 100);
+    border: 1px solid green;
+}
+button{
+    margin: 20px;
+    padding: 10px 15px;
+    background-color: gray;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+button:active{
+    transform: scale(0.9);
+}
