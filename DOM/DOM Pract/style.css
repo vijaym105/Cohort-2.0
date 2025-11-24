@@ -1,0 +1,37 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#box{
+    display: flex;
+    background-color: #111;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+button{
+    margin: 20px;
+    padding: 20px 25px;
+    font-size: 2rem;
+    background-color: gray;
+    border-radius: 5px;
+    border: none;
+    z-index: 10;
+    cursor: pointer;
+}
+button:active{
+    transform: scale(0.9);
+}
