@@ -48,28 +48,77 @@
 //     box.appendChild(h1)
 // })
 
+// Day 45 Dom task Download btn
+// let inner = document.querySelector('#inner');
+// let prog = document.querySelector('#progress');
+// let btn = document.querySelector('button');
+// let h1 = document.querySelector('h2');
+// let counter = 0;
+// btn.addEventListener('click',()=>{
+//     let num = 50+Math.floor(Math.random()*50);
 
-let inner = document.querySelector('#inner');
-let prog = document.querySelector('#progress');
-let btn = document.querySelector('button');
-let h1 = document.querySelector('h2');
-let counter = 0;
-btn.addEventListener('click',()=>{
-    // 50 + math.rdn vr floor kela * 50 
-    let num = 50+Math.floor(Math.random()*50);
-    console.log(num);
+//     btn.style.pointerEvents= "none"
+//     let cn = setInterval(()=>{
+//     counter++;
+//     h1.innerHTML = `${counter}`+"%"
+//     prog.style.width = `${counter}%`
+//    },30)
+
+//    setTimeout(()=>{
+//    clearInterval(cn)
+//    btn.style.opacity = 0.3
+//    btn.innerHTML = "Downloaded"
+//    console.log("File is downloaded in",num/10+"Seconds");
+//    },3000)
+// })
+
+// let icn = document.querySelector('i');
+// let img = document.querySelector('img');
+// let card = document.querySelector('#card');
+
+// img.addEventListener('dblclick',()=>{
+//     icn.style.transform = "scale(2)"
+//     icn.style.opacity = 1
+//     icn.style.color = "red"
+
+// })
+
+const cards = [
+  {
+    img: "https://picsum.photos/300/200?random=1",
+    name: "John Carter",
+    about: "Frontend developer who loves building clean UI components."
+  },
+  {
+    img: "https://picsum.photos/300/200?random=2",
+    name: "Alicia Gomez",
+    about: "Digital marketer specializing in branding and SEO strategy."
+  },
+  {
+    img: "https://picsum.photos/300/200?random=3",
+    name: "Michael Lee",
+    about: "Full-stack engineer passionate about cloud and automation."
+  },
+  {
+    img: "https://picsum.photos/300/200?random=4",
+    name: "Sara Patel",
+    about: "UI/UX designer who enjoys crafting intuitive user experiences."
+  },
+  {
+    img: "https://picsum.photos/300/200?random=5",
+    name: "David Kim",
+    about: "Data analyst focused on insights, dashboards and storytelling."
+  }
+];
+let sum = ''
+cards.forEach((elem)=>{
+    sum = sum + `<div id="card">
+    <img src="${elem.img}" alt="Not Found">
+    <h2>${elem.name}</h2>
+    <h4>${elem.about}</h4>
+   </div>`
     
-   btn.style.pointerEvents= "none"
-   let cn = setInterval(()=>{
-    counter++;
-    h1.innerHTML = `${counter}`+"%"
-    prog.style.width = `${counter}%`
-   },30)
-   setTimeout(()=>{
-   clearInterval(cn)
-   btn.style.opacity = 0.3
-   btn.innerHTML = "Downloaded"
-   console.log("File is downloaded in",num/10+"Seconds");
-   
-   },3000)
 })
+
+let box = document.querySelector('#box');
+box.innerHTML = sum;
