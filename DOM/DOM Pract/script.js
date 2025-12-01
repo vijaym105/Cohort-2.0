@@ -83,42 +83,52 @@
 
 // })
 
-const cards = [
-  {
-    img: "https://picsum.photos/300/200?random=1",
-    name: "John Carter",
-    about: "Frontend developer who loves building clean UI components."
-  },
-  {
-    img: "https://picsum.photos/300/200?random=2",
-    name: "Alicia Gomez",
-    about: "Digital marketer specializing in branding and SEO strategy."
-  },
-  {
-    img: "https://picsum.photos/300/200?random=3",
-    name: "Michael Lee",
-    about: "Full-stack engineer passionate about cloud and automation."
-  },
-  {
-    img: "https://picsum.photos/300/200?random=4",
-    name: "Sara Patel",
-    about: "UI/UX designer who enjoys crafting intuitive user experiences."
-  },
-  {
-    img: "https://picsum.photos/300/200?random=5",
-    name: "David Kim",
-    about: "Data analyst focused on insights, dashboards and storytelling."
-  }
-];
-let sum = ''
-cards.forEach((elem)=>{
-    sum = sum + `<div id="card">
-    <img src="${elem.img}" alt="Not Found">
-    <h2>${elem.name}</h2>
-    <h4>${elem.about}</h4>
-   </div>`
+// const cards = [
+//   {
+//     img: "https://picsum.photos/300/200?random=1",
+//     name: "John Carter",
+//     about: "Frontend developer who loves building clean UI components."
+//   },
+//   {
+//     img: "https://picsum.photos/300/200?random=2",
+//     name: "Alicia Gomez",
+//     about: "Digital marketer specializing in branding and SEO strategy."
+//   },
+//   {
+//     img: "https://picsum.photos/300/200?random=3",
+//     name: "Michael Lee",
+//     about: "Full-stack engineer passionate about cloud and automation."
+//   },
+//   {
+//     img: "https://picsum.photos/300/200?random=4",
+//     name: "Sara Patel",
+//     about: "UI/UX designer who enjoys crafting intuitive user experiences."
+//   },
+//   {
+//     img: "https://picsum.photos/300/200?random=5",
+//     name: "David Kim",
+//     about: "Data analyst focused on insights, dashboards and storytelling."
+//   }
+// ];
+// let sum = ''
+// cards.forEach((elem)=>{
+//     sum = sum + `<div id="card">
+//     <img src="${elem.img}" alt="Not Found">
+//     <h2>${elem.name}</h2>
+//     <h4>${elem.about}</h4>
+//    </div>`
     
+// })
+
+// let box = document.querySelector('#box');
+// box.innerHTML = sum;
+
+let cursor = document.querySelector('#cursor');
+let box = document.querySelector("#box")
+
+window.addEventListener('mousemove',(dets)=>{
+    cursor.style.top = dets.y+'px'
+    cursor.style.left = dets.x + 'px'
+    console.log(dets);
 })
 
-let box = document.querySelector('#box');
-box.innerHTML = sum;

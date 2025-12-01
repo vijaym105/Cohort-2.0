@@ -11,7 +11,6 @@ html, body {
 }
 
 #box{
-    display: flex;
     background-color: #111;
     /* align-items: center;
     justify-content: center; */
@@ -19,32 +18,12 @@ html, body {
     width: 100%;
 }
 
-#card{
-  margin: 20px;
-  height: 350px;
-  width: 250px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-}
-#card img{
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0px;
+
+#cursor{
+  height: 50px;
+  position: fixed;
+  transform: translate(-50% -50%);
 }
 
-#card h2{
-  /* text-align: center; */
-  padding: 5px 20px;
-  margin-bottom: 10px;
-}
 
-#card h4{
-  padding: 5px;
-  text-align: center;
-}
 
