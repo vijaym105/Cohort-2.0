@@ -1,0 +1,125 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to left bottom, rgba(128, 128, 128, 0.977),rgb(0, 0, 0));
+    padding: 15px;
+}
+
+section{
+    height: 100%;
+    width: 370px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.all-reels{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    
+    scroll-snap-type: mandatory;
+    scroll-behavior: smooth;
+
+}
+.all-reels::-webkit-scrollbar{
+    display: none;
+}
+#reels{
+    height: 100%;
+    width: 100%;
+    background-color: antiquewhite;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    border-radius: 10px;
+}
+#reels video{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#btm-sec{
+    width: 100%;
+    padding: 20px 25px;
+    background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.056), rgba(0, 0, 0, 0.292));
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+}
+#user{
+    color: white;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#user img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+#btm-sec p{
+    color: white;
+    margin-top: 10px;
+}
+
+#user button{
+    background-color: transparent;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+#right-sec{
+    position: absolute;
+    right: 1%;
+    padding: 10px;
+    bottom: 20%;
+    color: white;
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0.8;
+}
+
+#heart{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    
+}
+#comments{
+    display: flex;
+    flex-direction: column;
+}
+#share{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+#right-sec i{
+    font-size: 20px;
+}
