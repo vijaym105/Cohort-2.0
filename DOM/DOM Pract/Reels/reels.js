@@ -41,7 +41,7 @@ const reels = [
     shareCount: 138,
     isFollowed: true,
     caption: "When flexbox finally aligns the way you wanted 😭🔥",
-    video: "./reels/video3.mp4",
+    video: "./vid4.mp4",
 
     userprofile: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126"
   },
@@ -54,7 +54,7 @@ const reels = [
     shareCount: 201,
     isFollowed: false,
     caption: "My solo Bali trip changed everything 🌴",
-    video: "./vid",
+    video: "./vid5.mp4",
 
     userprofile: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
   }
