@@ -1,0 +1,43 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    gap: 10px;
+}
+
+.red{
+    background-color: crimson;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: royalblue;
+}
+.box{
+    height: 100px;
+    width: 100px;
+}
+
+.box:hover{
+    transform: scale(1.1) !important;
+    transition: all 0.2s ease;
+}
+
+body:has(.box:hover) .box{
+    transform: scale(0.9);
+    transition: all 0.2s ease-in;
+}
