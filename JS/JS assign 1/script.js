@@ -572,12 +572,64 @@
 
 // 10. Create a nested object (`user → address → city`) and
 // access the city name inside it.
-let user = {
-    name: "Vijay",
-    age: 20,
-    address: {
-        city: "Pune"
-    }
-};
+// let user = {
+//     name: "Vijay",
+//     age: 20,
+//     address: {
+//         city: "Pune"
+//     }
+// };
+// let city = user.address.city;
 
-let city = user.address.city;
+
+// OOPS In Js
+
+// Task 1
+// Create 3 users using the same class
+// Store them in an array
+// Loop & call getDetails() for each user
+
+// class User{
+//     constructor(username, email, age){
+//         this.username = username;
+//         this.email = email
+//         this.age = age
+//     }
+//     login(){
+//         console.log("User is logged in.");
+        
+//     }
+//     logout(){
+//         console.log("User is logged out.");
+
+//     }
+//     getDetails(){
+
+//     }
+// }
+
+// let user1 = new User("Vijay" , "malusarevijay10@gmail.com", 21)
+// let user2 = new User("Ajay" , "malusare@gmail.com", 19)
+// let user3 = new User("Jaddu" , "Jaddu@gmail.com", 109)
+
+
+// ProtoType
+
+class Human{
+    constructor(){
+        this.name = "vj";
+        this.age = 27;
+    }
+    
+}
+
+Human.prototype.Oxygen =function(){
+        console.log("Breathing....");
+        
+    }
+ Human.prototype.Eating = function(){
+                console.log("Eating....");
+
+    }
+let human1 = new Human();
+let human2 = new Human();
