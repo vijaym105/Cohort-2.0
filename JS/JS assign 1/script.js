@@ -615,21 +615,110 @@
 
 // ProtoType
 
-class Human{
-    constructor(){
-        this.name = "vj";
-        this.age = 27;
-    }
+// class Human{
+//     constructor(){
+//         this.name = "vj";
+//         this.age = 27;
+//     }
     
+// }
+
+// Human.prototype.Oxygen =function(){
+//         console.log("Breathing....");
+        
+//     }
+//  Human.prototype.Eating = function(){
+//                 console.log("Eating....");
+
+//     }
+// let human1 = new Human();
+// let human2 = new Human();
+
+// Prototype is used to avoid same field of code to write every time ,(Saves memeory and enhance performance) .
+// Here, Oxygen & Eating method shares field of code in class Human , now whenever instances are created both methods will be present 
+
+
+// this keyword
+
+// Global --> window
+// console.log(this) --> Window
+
+// fnc --> window
+// function ab(){
+//     console.log(this);   
+// }
+// ab() --> Window
+
+// es5 fnc inside object --> object
+// let obj = {
+//     name : "vijay",
+//      fnc: function(){
+//         console.log(this);
+        
+//     }
+// }
+// obj.fnc() --> name: 'vijay'
+
+// es5 fnc inside es5 fnc inside onject --> window
+// let obj = {
+//     name : "vijay",
+//      fnc: function(){
+//        function def(){
+//         console.log(this);
+//     }    
+//     def()
+//     }
+// }
+// obj.fnc --> Windows
+
+
+// es6 fnc inside es5 fnc inside onject --> object
+// let obj = {
+//     name : "vijay",
+//      fnc: function(){
+//            let def=()=>{
+//         console.log(this);
+//     }    
+//     def()
+//     }
+// }
+// obj.fnc --> name:vijay
+
+
+
+// // Call , blind , apply
+// ek-function-mein-this-ki- value-window-hoti-hai, -agar-aap- chaahte-ho-ki-wo-value-window- naa-ho-par-koi-aur-object-ho- tab-aap-use-kr-skte-ho-call- apply-bind- ka
+
+//Call = It runs a fnc and sets value of 'this'
+// let obj = {
+//     name: "Vj"
+// }
+
+// function ab(){
+//     console.log(this);
+    
+// }
+// ab.call(obj)
+
+//Apply = same as call , stores 'this' value as first argument and array as second args
+// let obj = {
+//     name: "Vj"
+// }
+
+// function ab(a,b){
+//     console.log(this, a ,b);
+    
+// }
+// ab.apply(obj,[12,23])
+
+
+//
+let obj = {
+    name: "Vj"
 }
 
-Human.prototype.Oxygen =function(){
-        console.log("Breathing....");
-        
-    }
- Human.prototype.Eating = function(){
-                console.log("Eating....");
-
-    }
-let human1 = new Human();
-let human2 = new Human();
+function ab(a,b,c){
+    console.log(this, a,b,c);
+    
+}
+ab.blind(obj, 1,3,5)
