@@ -1,4 +1,4 @@
-/// Assignment 1 
+// / Assignment 1 
 //  Logging and interaction
 // console.log("HEy")
 // console.info("Tags");
@@ -29,12 +29,12 @@
 // console.log(a)
 // console.log(a)
 
-//Expressions
+// Expressions
 // let x = (5+10) *2;
 // console.log(x);
 
 
-//DataTypes
+// DataTypes
 // let nam = "VIjay"; String
 // let age =  12; number/integer
 // let cgpa = 13.4; float
@@ -64,29 +64,29 @@
 
 
 
-/// assign 2 
+// / assign 2 
 // Basic Operators (Arithmetic, Assignment, Increment, Decrement,
 // Comparison, Logical, Bitwise
-//(A).
+// (A).
 //  a = 10;
 //  b = 3;
 //  console.log(a+b);
 //  console.log(a-b);
 //  console.log(a/b);
 //  console.log(a%b);
-//(B).
+// (B).
 // let x = 5;
 // x += 5;
 // x -= 5;
 // x /= 2;
 // x %= 5;
 // console.log(x);
-//(C).
+// (C).
 // let count = 5;
 // count++;
 // count--;
 // console.log(count);
-//(D).
+// (D).
 // if(isStudent && ID){
 //     console.log("Permission granted");
 // } // is both condition satisfy then log will be printed
@@ -97,17 +97,17 @@
 
 
 // Variable Hoisting in JavaScript
-//(a).
+// (a).
 // console.log(a);
 // var a = 10; // undefined
 // let a = 10; // cannot access before initialize.
 // const a = 10; // cannot access before initialize.
-//(b).
+// (b).
 // test()
 // function test() { console.log("Hello") }
 // let fnc = function test(){console.log("Hell nahh");
 // } // test is not defined
-//(e).
+// (e).
 // Function declartion and var Variable gets fully hoisted.
 
 
@@ -285,7 +285,7 @@
 //     console.log(count);
 // }
 
-//13. Print numbers divisible by 7 from 1 to 50
+// 13. Print numbers divisible by 7 from 1 to 50
 // Use modulo % and loop.
 // for(i=1;i<=50;i++){
 //     if(i % 7 === 0){
@@ -387,11 +387,11 @@
 // tryin(1,2,3,4,5,6,7,8,9,10);
 
 
-//💚💚💚💚
-//Level 1 – Basic Function, Array & Object Code
-//Tasks (Easy)
+// 💚💚💚💚
+// Level 1 – Basic Function, Array & Object Code
+// Tasks (Easy)
 
-//1. Write a function `sayHello()` that prints `"Hello
+// 1. Write a function `sayHello()` that prints `"Hello
 // // JavaScript"`.
 // function sayHello(nav){
 //     console.log(`Hello ${nav}`);
@@ -689,7 +689,7 @@
 // // Call , blind , apply
 // ek-function-mein-this-ki- value-window-hoti-hai, -agar-aap- chaahte-ho-ki-wo-value-window- naa-ho-par-koi-aur-object-ho- tab-aap-use-kr-skte-ho-call- apply-bind- ka
 
-//Call = It runs a fnc and sets value of 'this'
+// call = It runs a fnc and sets value of 'this'
 // let obj = {
 //     name: "Vj"
 // }
@@ -700,7 +700,7 @@
 // }
 // ab.call(obj)
 
-//Apply = same as call , stores 'this' value as first argument and array as second args
+// apply = same as call , stores 'this' value as first argument and array as second args
 // let obj = {
 //     name: "Vj"
 // }
@@ -712,13 +712,289 @@
 // ab.apply(obj,[12,23])
 
 
-//
-let obj = {
-    name: "Vj"
-}
+// ## 4. `bind()`
 
-function ab(a,b,c){
-    console.log(this, a,b,c);
+// Returns a new function with fixed `this`.
+
+// function welcome() {
+//   console.log("Welcome", this.user);
+// }
+
+// const newFn = welcome.bind({ user: "Anubhav" });
+// newFn();
+
+
+// Setter and Getter
+// class Nm{
+//     constructor(name,price){
+//         this.name = name;
+//         this._price = price; // _ indicates that following parameter is private;
+//     }
+
+//     get price(){   
+//     console.log("getter called");
+//      return '$(this._price)';  
+//     }
+
+//     set price(val){
+//         if(val<=0){
+//             console.log("Invalid price");
+//             return; 
+//         }
+//         this._price = val
+//     }
+// }
+
+// let anm = new Nm("vijay", 2000);
+// console.log(anm._price);
+// anm.price = -2000;
+
+
+// SECTION 1: Objects and OOPS Thinking (Foundation)
+
+// 1.	Create a user object that stores name and email and has a login method which prints “User logged in”.
+// let user = {
+//     name: "Vijay",
+//     email: "ma@.gmail.com",
+//     login: function(){
+//         console.log("User logged in");
+        
+//     }
+// }
+// user.login()
+
+// 2.	Imagine you now have 3 users.
+// First, think how you would manage them without using a class.
+// Then convert the same logic using a class and observe how the code becomes cleaner. Write code for both approaches.
+// Without Class
+// let user = {
+//     name: "Vijay",
+//     email: "ma@.gmail.com",
+//     login: function(){
+//         console.log("User logged in");
+        
+//     }
+// }
+// user.login()
+
+
+// let user2 = {
+//     name: "Vijay",
+//     email: "ma@.gmail.com",
+//     login: function(){
+//         console.log("User logged in");
+        
+//     }
+// }
+// user2.login()
+
+// let user3 = {
+//     name: "Vijay",
+//     email: "ma@.gmail.com",
+//     login: function(){
+//         console.log("User logged in");
+        
+//     }
+// }
+// user3.login()
+
+// With using class
+// class User{
+//     constructor(){
+//         this.name = "Vijay";
+//         this.email = "email";
+//     }
+//     isLogin(val){
+//         console.log(`${val}`+" is logged in");
+        
+//     }
+// }
+
+// let user1 = new User();
+// user1.isLogin("User1");
+// let user2 = new User(); 
+// user2.isLogin("User2");
+// let user3 = new User(); 
+// user3.isLogin("User3")
+
+
+// 3. Create a product object that stores name and price and has a method which returns the final price after discount.
+
+// let product = {
+//     name: "Vj",
+//     price: 10000,
+//     dis: function(){
+//        let ab =  this.price *5/ 100;
+//        return ab;
+//     }
+// }
+// let sad =product.dis()
+// console.log(sad);
+
+// The goal of this section is to understand why keeping data and behavior together makes code easier to manage.
+
+// SECTION 2: Classes and Objects
+// 4.	Create a Car class with the following: brand speed a drive method that prints the car brand and speed
+
+// class Car{
+//     constructor(brand, speed){
+//         this.brand = brand;
+//         this.speed = speed;
+//     }
+//     drive(){
+//         console.log("Car belongs to "+`${this.brand}` +" brand and has top speed of "+ `${this.speed}`);
+        
+//     }
+// }
+// let car1 = new Car("BMW", 200);
+// car1.drive();
+// console.log(car1);
+
+// Answer this in your own words:
+// If classes did not exist, how would you write this logic and what problems might occur when the project becomes large?
+// 1). More line of code .
+// 2). Reusability wouldn't be there.
+// 3). In larger projects it would cause major issue.
+
+
+// SECTION 3: Constructor and this keyword
+// 	7.	Create a Student class whose constructor accepts name and roll number. Add a method introduce that prints both values.
+// class Student{
+//     constructor(name, roll_no){
+//         this.name = name;
+//         this.roll_no = roll_no;
+//     }
+//     introduce(){
+//         console.log("Name : "+ `${this.name}` + ", Roll no : " + `${this.roll_no}`);
+        
+//     }
+// }
+// let stud1 = new Student("Vijay", 46);
+// stud1.introduce();
+
+// 8.	Inside the constructor, set values using this.
+// Then try removing this and notice what error occurs and why.
+// class Student{
+//     constructor(name, roll_no){
+//         name = name;
+//         roll_no = roll_no;
+//     }
+//     introduce(){
+//         console.log("Name : "+ `${name}` + ", Roll no : " + `${roll_no}`);
+        
+//     }
+// }
+// let stud1 = new Student("Vijay", 46);
+// console.log(stud1);
+// undefined or black Object(that is created using 'new') , 'this' stores the value in blank object whenever respective class is trigger for creating object.
+
+// 9.	Create an object with two methods: One method using a normal function One method using an arrow function Inside both, print this and observe the difference.
+// let obj = {
+//     fnc1: function(){
+//         console.log(this);
+        
+//     },
+//     fnc2: ()=>{
+//         console.log(this);
+//     }
+// }
+// obj.fnc1() // A es5 function , O/p --> object
+// obj.fnc2() // Gives es6 fnc , o/p --> windows
+
+
+
+// SECTION 4: Constructor Functions and Prototypes
+
+//10. Create a User constructor function (do not use class syntax).
+
+// function User(name, age){
+//     this.name = name;
+//     this.age = age;
+// }
+
+// let ud = new User("vijay", 21);
+// console.log(ud);
+
+// 11.	Add a login method in two ways: First, inside the constructor Then, move the method to the prototype
+// Method 1:
+// function Std(name, email){
+//     this.name = name;
+//     this.email = email;
+
+//     function login(){
+//         console.log(`${name} has logged in...`);
+        
+//     }
+//     login()
+// }
+// let sd = new Std("Vijay", "mal@MediaList.com");
+
+//Method 2:
+// function Std(name, email){
+//     this.name = name;
+//     this.email = email;
+
+// }
+// Std.prototype.login = function(){
+//         console.log(`${this.name} has logged in...`);
+        
+//     }
+// let sd = new Std("Vijay", "mal@MediaList.com");
+// sd.login();
+// let s1= new Std("Dj", "mal@aisasdiosh.com");
+// s1.login();
+
+// 12.	Create two User objects and compare their login methods using equality.
+// Explain why the result is true or false.
+
+// function User(name, age){
+//     this.name = name;
+//     this.age = age;
+
+//     this.login = function(){
+//         console.log(`${this.name} has logged in successfully`);
+//     }
     
-}
-ab.blind(obj, 1,3,5)
+// }
+
+// let user1 = new User("Vijay", 21)
+// let user2 = new User("Ajay", 25)
+
+// console.log(user1.login === user2.login); // o/p is false . reason -> even if the method are same but the data inside method differs so resultants false.
+
+
+// SECTION 5: call, apply, bind
+
+// 13.	Create a function that prints this.name.
+// Use call to run the function using the object
+// Use apply to run the function using the object
+// Use bind to create a new function and then call it
+
+//      function Con(name){
+//     this.name = name;
+// }
+
+// let obj = {
+//     name: "Malusare"
+// }
+
+
+// Con.call(obj,"Vijay"); 
+
+// Con.apply(obj, [1,2])
+
+// let sui = Con.blind({name: "Dj"});
+// sui();
+
+
+//  15.	Borrow a method from one object and run it for another object using call.
+// let obj1 = {
+//     fnc: function ab(){
+//         console.log(`${this.name}`+" borrowed");
+        
+//     }
+// }
+// let obj2 = {
+//     name: "Vijay"
+// }
+// obj1.fnc.call(obj2);
