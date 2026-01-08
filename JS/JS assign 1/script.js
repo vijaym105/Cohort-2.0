@@ -1135,33 +1135,207 @@
 // - Yehi structure baad mein callback hell banta hai
 
 
-function loginUser(username, cb){
-    setTimeout(()=>{
-        cb({username: "Vijay", gmail:"mal@gmail.com"})
-    },1000)
-}
+// function loginUser(username, cb){
+//     setTimeout(()=>{
+//         cb({username: "Vijay", gmail:"mal@gmail.com"})
+//     },1000)
+// }
 
-function fetchPermissions(userId, cb){
-    setTimeout(()=>{
-        cb([101, 102, 104])
-    },1000)
-}
-function loadDashboard(perm , cb){
-    console.log("Taking permission...");
-    setTimeout(()=>{
-        cb("Dashboard Loaded!")
-    },2000)
-}
+// function fetchPermissions(userId, cb){
+//     setTimeout(()=>{
+//         cb([101, 102, 104])
+//     },1000)
+// }
+// function loadDashboard(perm , cb){
+//     console.log("Taking permission...");
+//     setTimeout(()=>{
+//         cb("Dashboard Loaded!")
+//     },2000)
+// }
 
 
-loginUser("Vijay", function(dets){
-    console.log(dets);
-    fetchPermissions("101", function(permissions){
-        console.log(permissions);
-        loadDashboard("Granted", function(parma){
-            console.log(parma);
+// loginUser("Vijay", function(dets){
+//     console.log(dets);
+//     fetchPermissions("101", function(permissions){
+//         console.log(permissions);
+//         loadDashboard("Granted", function(parma){
+//             console.log(parma);
             
-        })
-    })
+//         })
+//     })
     
-})
+// })
+
+
+// Promises -> promises returns 3 types of promises , pending, resolve, reject
+
+// let p = new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//         resolve()
+//     },2000)
+// })
+// p.then(function(){
+//     console.log("Resolved");
+// })
+// .catch(()=>{
+//     console.log("Rejected");
+    
+// })
+
+// Fetch use case
+
+// fetch('https://randomuser.me/api/').then((raw)=> raw.json())
+// .then((data)=>{
+//     console.log("Data is Loading...");
+    
+//     console.log(data.results[0].name);
+    
+// })
+
+// async makes a function return a Promise.
+// await -> `await` pauses execution until the Promise resolves. You can use `await` only inside `async` functions 
+
+// async function getDetails(){
+// let pr = await fetch('https://randomuser.me/api/');
+// let data = await pr.json();
+//  console.log(data);
+ 
+// }
+// getDetails()
+
+
+// try() catch()
+// try {
+//   let obj = undefined;
+//   obj.name; 
+// } catch (err) {
+//   console.log("Name:", err.name);      //`name` – error type: `ReferenceError`, `TypeError`, `SyntaxError`, etc.
+//   console.log("Message:", err.message); //  message` – description of the error 
+//   console.log("Stack:", err.stack);  // stack trace (where the error occurred)
+// }
+
+
+// Exception handling
+// try{
+//     let num = 10 / 0;
+//     console.log(num);
+    
+// }catch(error){
+//     console.log("Something went wrong");
+// }
+
+// finally -> executes whether an error occurs or not.
+// try{
+//     let a = 12
+//     console.log(a.name.first);
+// }catch(err){
+//     console.log("Something went wrong");
+    
+// }
+// finally{
+//     console.log("chal jhatu");
+    
+// }
+
+
+// API example (OpenWeatherMap):
+
+// `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
+
+// ## Scenario 1 — Weather Dashboard with Error Handlingt weather data from a public weather API (e.g., OpenWeatherMap).
+// Build a small weather dashboard that fetches current weather data from a public weather API (e.g., OpenWeatherMap).
+
+// ### Requirements
+// - Make the API request asynchronously using `fetch` with `async/await`.
+// - Handle API request failures (for example, invalid city name) using `try/catch`.
+// - Create and throw custom errors based on weather conditions (e.g., extremely high or low temperature) and handle them appropriately.
+
+// ### Suggested tasks
+// - Build a simple UI to input a city name and display the result.
+// - Show user-friendly error messages for network errors, invalid input, or API errors.
+// - Demonstrate at least one custom thrown error (e.g., `ExtremeTemperatureError`) and handle it in the UI.
+
+
+// async function weather(city){
+//     try{
+//     let apikey = `afe149b5ef80f50a0df3b5576823053f`;
+//    let raw = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`)
+//    let data = await raw.json();
+//    let temp =  data.main.temp;
+//    if(temp > 30) console.log("Too hot out there " + temp+"℃");
+//    else if(temp < 30 && temp >= 12) console.log("Tempreature is cold , tilted towards cold " +temp+"℃");
+//    else if(temp < 0 ) { console.log("Too damn cold " + temp+"℃")}
+//     else{
+//         console.log("Tempreature not found")
+//     }
+   
+//     console.log(data); 
+    
+// if(!raw.ok){
+//      throw new Error("Something went wrong or city not found");
+// }
+//   let real = await raw.json();
+//   console.log(real);
+
+// }catch(err){
+//     console.log(err.message);
+    
+// }
+// }
+// weather("mumbai");
+
+// Scenario 2 — Bulk Email Sending Simulation with Parallel Promises and Error Handling
+// Simulate sending bulk emails to 5 users. Treat each email-sending operation as a `Promise` (simulate delays with `setTimeout`).
+
+// ### Requirements
+// - Send all emails in parallel using `Promise.all`.
+// - If any email fails (e.g., due to a simulated random failure), catch the error and clearly indicate which specific email failed.
+// - Use a `finally` block to display a message indicating that the "Email process is complete." (regardless of success/failure).
+
+// ### Suggested tasks
+// - Create an array of 5 mock email tasks that resolve or reject based on a random condition.
+// - Call `Promise.all` and handle success and failure cases. Show a breakdown of which emails succeeded and which failed.
+// - Ensure the `finally` block runs to update the UI or console indicating completion.
+
+let emails = [
+  "Malusarevijay@gmail.com",
+  "xyzx@gmail.com",
+  "nallesh@gmail.com",
+  "hackur@gmail.com"
+];
+
+function sendEmail(email) {
+  return new Promise((resolve, reject) => {
+    let time = Math.floor(Math.random() * 5);
+
+    setTimeout(() => {
+      let prob = Math.floor(Math.random() * 10);
+      if (prob <= 5) resolve(`Email sent to ${email}`);
+      else reject(new Error(`Email failed for ${email}`));
+    }, time * 1000);
+  });
+}
+
+async function emailList(userList) {
+  let promises = userList.map((email) => {
+    return sendEmail(email)
+      .then((data) => data)
+      .catch((err) => err.message)
+      .finally(() => {
+        console.log("Operation performed successfully ✅");
+      });
+  });
+
+  let results = await Promise.all(promises);
+
+  results.forEach((result) => {
+    console.log(result);
+  });
+}
+
+emailList(emails);
+
+
+
+
+
