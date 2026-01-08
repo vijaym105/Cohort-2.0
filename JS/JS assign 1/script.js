@@ -1255,7 +1255,6 @@
 // - Show user-friendly error messages for network errors, invalid input, or API errors.
 // - Demonstrate at least one custom thrown error (e.g., `ExtremeTemperatureError`) and handle it in the UI.
 
-
 // async function weather(city){
 //     try{
 //     let apikey = `afe149b5ef80f50a0df3b5576823053f`;
@@ -1284,6 +1283,8 @@
 // }
 // weather("mumbai");
 
+
+
 // Scenario 2 — Bulk Email Sending Simulation with Parallel Promises and Error Handling
 // Simulate sending bulk emails to 5 users. Treat each email-sending operation as a `Promise` (simulate delays with `setTimeout`).
 
@@ -1297,45 +1298,109 @@
 // - Call `Promise.all` and handle success and failure cases. Show a breakdown of which emails succeeded and which failed.
 // - Ensure the `finally` block runs to update the UI or console indicating completion.
 
-let emails = [
-  "Malusarevijay@gmail.com",
-  "xyzx@gmail.com",
-  "nallesh@gmail.com",
-  "hackur@gmail.com"
-];
+// let emails = [
+//   "Malusarevijay@gmail.com",
+//   "xyzx@gmail.com",
+//   "nallesh@gmail.com",
+//   "hackur@gmail.com"
+// ];
 
-function sendEmail(email) {
-  return new Promise((resolve, reject) => {
-    let time = Math.floor(Math.random() * 5);
+// function sendEmail(email) {
+//   return new Promise((resolve, reject) => {
+//     let time = Math.floor(Math.random() * 5);
 
-    setTimeout(() => {
-      let prob = Math.floor(Math.random() * 10);
-      if (prob <= 5) resolve(`Email sent to ${email}`);
-      else reject(new Error(`Email failed for ${email}`));
-    }, time * 1000);
-  });
+//     setTimeout(() => {
+//       let prob = Math.floor(Math.random() * 10);
+//       if (prob <= 5) resolve(`Email sent to ${email}`);
+//       else reject(new Error(`Email failed for ${email}`));
+//     }, time * 1000);
+//   });
+// }
+
+// async function emailList(userList) {
+//   let promises = userList.map((email) => {
+//     return sendEmail(email)
+//       .then((data) => data)
+//       .catch((err) => err.message)
+//       .finally(() => {
+//         console.log("Operation performed successfully ✅");
+//       });
+//   });
+
+//   let results = await Promise.all(promises);
+
+//   results.forEach((result) => {
+//     console.log(result);
+//   });
+// }
+
+// emailList(emails);
+
+
+
+//  What is Debouncing?
+// Debouncing ensures that a function executes only after a specified period of inactivity. If the event keeps firing repeatedly, the function is delayed until the event stops.
+// In simple terms: "Run the function only after the last event — wait until the user pauses."
+// 2 Benefits of Debouncing
+// - Reduces unnecessary function executions
+// - Prevents server overload in API-based features
+// - Improves UI responsiveness
+// - Saves computational cost in high-frequency events
+
+// Syntax 
+// function debouncing(fn, delay){
+//   let timer;
+//   return function(...args){
+//     setTimeout(()=>{
+//       fn.apply(this.args)
+//     },delay)
+//   }
+// }
+
+// Example for Search input
+// let inp = document.querySelector("#inp");
+
+// function debouncing(fn, delay){
+//   let timer;
+//   return function(){
+//     clearTimeout(timer)
+//     timer = setTimeout(fn, delay)
+//   }
+// }
+// inp.addEventListener("input",
+//   debouncing(function () {
+//     console.log("Run");
+//   },500)
+// )
+
+// throtling -> Throttling ensures that a function executes at fixed time intervals, regardless of how frequently the event fires.
+// Syntax
+// function throttle(fn, limit){
+//   let lastcall = 0;
+//   return function(...args){
+//      let now = Date.now();
+//      if(now = lastcall >= limit){
+//       lastcall = now;
+//       fn.apply(args)
+//      }
+//   }
+// }
+
+// Example for window mouse move
+
+function throtling(fn, delay){
+  let lastcall = 0;
+  return function(){
+    let now = Date.now();
+    if(now - lastcall >= delay){
+      lastcall = now
+      fn();
+    }
+  }
 }
 
-async function emailList(userList) {
-  let promises = userList.map((email) => {
-    return sendEmail(email)
-      .then((data) => data)
-      .catch((err) => err.message)
-      .finally(() => {
-        console.log("Operation performed successfully ✅");
-      });
-  });
-
-  let results = await Promise.all(promises);
-
-  results.forEach((result) => {
-    console.log(result);
-  });
-}
-
-emailList(emails);
-
-
-
-
-
+window.addEventListener("mousemove",
+  throtling(function(){
+    console.log("Moving");
+  },2000)
+)
